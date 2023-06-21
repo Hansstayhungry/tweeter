@@ -1,0 +1,26 @@
+nav {
+  background-color: #4056A1;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  padding: 1.5em;
+  justify-content: space-between;
+}
+
+nav span {
+  font-family: 'Bungee', cursive;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.nav-right {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.fa-solid.fa-angles-down {
+  color: #f70202;
+  display: flex;
+  justify-content: center;
+}
