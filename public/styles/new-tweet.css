@@ -1,0 +1,25 @@
+.container {
+  background-color: inherit;
+  margin: 1% 5%;
+ }
+
+ .container textarea {
+  border: none;
+  border-bottom: 5px solid;
+  background-color: inherit;
+  width: 100%;
+  resize: none;
+  font-weight: 600;
+ }
+
+ .container div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+ }
+
+ .container button {
+  background-color: #4056A1;
+  color: white;
+  padding: 1px 15px;
+ }

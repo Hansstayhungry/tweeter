@@ -23,13 +23,13 @@ body {
 
 header {
   display: flex;
-  height: 520px;
-  justify-content: flex-end;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 520px;
+  color: #FFFFFF;
   background-color: #ebb400;
-  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url('../images/header-background.png');
 }
 
 /*
