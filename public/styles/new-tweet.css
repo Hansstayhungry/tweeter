@@ -22,4 +22,9 @@
   background-color: #4056A1;
   color: white;
   padding: 1px 15px;
+  cursor: pointer;
+ }
+
+ .negativeColor {
+  color: red;
  }
