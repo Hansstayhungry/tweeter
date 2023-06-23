@@ -1,30 +1,37 @@
 .container {
-  background-color: inherit;
   margin: 1% 5%;
  }
 
- .container textarea {
+.container textarea {
   border: none;
   border-bottom: 5px solid;
-  background-color: inherit;
   width: 100%;
   resize: none;
   font-weight: 600;
- }
+  background-color: inherit;
+}
 
- .container div {
+.container div {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee', cursive;
- }
+}
 
- .container button {
+.container .new-tweet {
+  margin: 50px 0;
+}
+
+.container #submit-counter {
+  font-family: 'Bungee', cursive;
+}
+
+.container button {
   background-color: #4056A1;
   color: white;
   padding: 1px 15px;
   cursor: pointer;
- }
+}
 
- .negativeColor {
+.negativeColor {
   color: red;
- }
+}
+
