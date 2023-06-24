@@ -20,8 +20,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script src="/scripts/client.js"></script>
+    <script src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -49,10 +49,10 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form action="/tweets" method="post">
+        <form id="tweet-form">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div id="submit-counter">
-            <button type="submit" >Tweet</button>
+            <input type="submit" value="Tweet"></input>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
@@ -77,6 +77,9 @@
             <button class="fa-solid fa-heart" type="submit"></button>            
           </form>
         </footer>
+      </article>
+      <article id="tweets-container">
+        
       </article>
 
     </main>
