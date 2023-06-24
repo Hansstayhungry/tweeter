@@ -55,7 +55,7 @@ $(document).ready(function() {
         </section>
         <p class="content">${tweetData.content.text}</p>
         <footer class="tweet-footer">
-          <div id="daysAgo">${tweetData.created_at} days ago</div>
+          <div id="daysAgo">${getDaysAgo(tweetData)} days ago</div>
           <form id="flag-retweet-heart">
             <button class="fa-solid fa-flag" type="submit"></button>
             <button class="fa-solid fa-retweet" type="submit"></button>
