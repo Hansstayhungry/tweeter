@@ -5,6 +5,7 @@
  */
 
 // Test / driver code (temporary). Eventually will get this from the server.
+
 $(document).ready(function() {
 
   // prevent default behaviour of submit event (no refresh after submission)
@@ -25,6 +26,20 @@ $(document).ready(function() {
     })
 
   });
+
+
+  // fetch tweets
+  const loadtweets = function() {
+    $.ajax({
+      method:"GET",
+      url: "/tweets",
+      success: (data) => {
+        renderTweets(data)
+      }
+    })
+
+  }
+
 
   const data = [
     {
@@ -74,7 +89,7 @@ $(document).ready(function() {
         </section>
         <p class="content">${tweetData.content.text}</p>
         <footer class="tweet-footer">
-          <div id="daysAgo">${getDaysAgo(tweetData)} days ago</div>
+          <div id="daysAgo">${timeago.format(tweetData.created_at)}</div>
           <form id="flag-retweet-heart">
             <button class="fa-solid fa-flag" type="submit"></button>
             <button class="fa-solid fa-retweet" type="submit"></button>
@@ -86,7 +101,5 @@ $(document).ready(function() {
 
     return $tweet;
   }
-
-  renderTweets(data);
-
+  renderTweets(data)
 });
