@@ -6,6 +6,26 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 $(document).ready(function() {
+
+  // prevent default behaviour of submit event (no refresh after submission)
+  $("#tweet-form").on("submit", function(event){
+    event.preventDefault();
+
+    //serialized form data
+    const formData = $(this).serialize();
+
+    // use ajax to post data
+    $.ajax({
+      method:"POST",
+      url: "/tweets",
+      data:formData,
+      success: (res) => {
+        console.log(res)
+      }
+    })
+
+  });
+
   const data = [
     {
       "user": {
@@ -33,16 +53,15 @@ $(document).ready(function() {
 
   // loop through all tweets and append, then send to id=tweets-containter
   const renderTweets = function(tweets) {
-    let $allTweets = "";
     for (let tweet of tweets) {
-      $allTweets += createTweetElement(tweet);
+      const $tweet = createTweetElement(tweet);
+      $("#tweets-container").prepend($tweet);
     }
-    $("#tweets-container").append($allTweets);
   }
 
   // generate jquery format template
-  function createTweetElement(tweetData) {
-    const $tweet = `
+  const createTweetElement = function(tweetData) {
+    const $tweet = $(`
       <article class="tweet">
         <section class="tweet-header">
           <div>
@@ -63,10 +82,11 @@ $(document).ready(function() {
           </form>
         </footer>
       </article>
-    `;
+    `);
 
     return $tweet;
   }
 
   renderTweets(data);
+
 });
