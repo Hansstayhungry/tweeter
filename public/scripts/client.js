@@ -12,6 +12,20 @@ $(document).ready(function() {
   $("#tweet-form").on("submit", function(event){
     event.preventDefault();
 
+    //input validation
+    const notTrimmedtweetContent = $("#tweet-text").val()
+    const tweetContent = $("#tweet-text").val().trim();
+
+    if(!tweetContent) {
+      alert("You can not post empty tweet");
+      $("#tweet-text").val("");
+      // clear textarea text:
+    } else if (notTrimmedtweetContent.length > 140) {
+      alert("Please reduce post under 140 characters")
+    } else {
+      $("#tweet-text").val("");
+    }
+
     //serialized form data
     const formData = $(this).serialize();
 
@@ -19,12 +33,11 @@ $(document).ready(function() {
     $.ajax({
       method:"POST",
       url: "/tweets",
-      data:formData,
+      data: formData,
       success: (res) => {
-        console.log(res)
+
       }
     })
-
   });
 
 
