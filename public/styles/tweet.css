@@ -20,6 +20,8 @@ article.tweet #handle {
 }
 
 article.tweet img {
+  width: auto;
+  height: 50px;
   margin: 0 10px;
 }
 
