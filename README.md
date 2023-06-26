@@ -28,4 +28,5 @@ Skills that were stretched:
 
 ![Screenshot of desktop mode](https://github.com/Hansstayhungry/tweeter/blob/master/docs/desktop-layout.png)
 
+### Tablet mode
 ![Screenshot of tablet mode](https://github.com/Hansstayhungry/tweeter/blob/master/docs/tablet-layout.png)
