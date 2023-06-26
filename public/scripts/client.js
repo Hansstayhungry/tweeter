@@ -17,16 +17,26 @@ $(document).ready(function() {
     const tweetContent = $("#tweet-text").val().trim();
 
     if(!tweetContent) {
-      alert("You can not post empty tweet");
+      showError("⚠️You can not post an empty tweet⚠️");
       $("#tweet-text").val("");
       // clear textarea text:
     } else if (notTrimmedtweetContent.length > 140) {
-      alert("Please reduce post under 140 characters")
+      showError("⚠️Please reduce post under 140 characters⚠️");
     } else {
+      hideError()
       submitTweet();
       $("#tweet-text").val("");
     }
   });
+
+  //error message behaviour
+  const showError = function(errorMessage) {
+    $("#error-message").text(errorMessage).slideDown();
+  }
+
+  const hideError = function() {
+    $("#error-message").slideUp();
+  }
 
   const submitTweet = function() {
     //serialized form data

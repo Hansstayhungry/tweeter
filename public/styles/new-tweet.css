@@ -1,7 +1,3 @@
-.container {
-  margin: 1% 5%;
- }
-
 .container textarea {
   border: none;
   border-bottom: 5px solid;
@@ -35,3 +31,7 @@
   color: red;
 }
 
+.container #error-message {
+  color: red;
+  font-weight: bold;
+}
